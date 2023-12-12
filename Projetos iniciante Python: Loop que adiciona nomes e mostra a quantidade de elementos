@@ -1,0 +1,18 @@
+nomes = []
+while True:
+    nome = str(input("Digite seu nome: "))
+    if nome not in nomes:
+        nomes.append(nome)
+        print("Nome adicionado")
+    else:
+        print("Não adiciono")
+    while True:
+        resposta = str(input("Deseja adicionar mais nomes? [S/N] ")).upper()
+        if resposta in "SN":
+            break
+        else:
+            print("resposta inválida")
+    if resposta in "N":
+        break
+print(f"Apareceu {len(nomes)} vezes")
+print(f"Os nomes adicionados foram {sorted(nomes)}")
